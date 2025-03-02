@@ -6,8 +6,6 @@ export const SEARCH_ICON = 'https://img.icons8.com/ios7/512/search.png'
 
 export const USER_ICON = 'https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png'
 
-const YT_API_KEY = 'AIzaSyCI0CJtBOa55F6lBauDjroUT2DyjnHNBSg'
-
-export const YT_VIDEOS_API = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=48&regionCode=IN&key='+YT_API_KEY
+export const YT_VIDEOS_API = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=48&regionCode=IN&key='+process.env.YT_API_KEY
 
 export const YT_SEARCH_API = 'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
