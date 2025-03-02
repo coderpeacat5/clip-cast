@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
 /* Hide scrollbar for Chrome, Safari, and Edge */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
