@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { OFFSET_LIVE_CHAT } from "./constants";
 
 const chatSlice = createSlice({
     name :'chat',
@@ -7,8 +8,8 @@ const chatSlice = createSlice({
     },
     reducers : {
         addMessage : (state, action) => {
-            state.messages.push(action.payload)
-            if (state.messages.length > 50) state.messages.shift(); // Keep only last 50 messages
+            state.messages.splice(OFFSET_LIVE_CHAT,1)
+            state.messages.unshift(action.payload)
         }
     }
 }) 
